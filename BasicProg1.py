@@ -71,7 +71,12 @@ diamondData.color.value_counts()
 diamondData.cut.value_counts() 
 diamondData.clarity.value_counts() 
 
+# dropping passed columns
+diamondData.drop(["carat"], axis = 1, inplace = True) 
+diamondData.drop(["Unnamed: 0"], axis = 1, inplace = True) 
 
+''' deletion of dataframe '''
+del diamondData
 
-
-
+# display 
+diamondData 
