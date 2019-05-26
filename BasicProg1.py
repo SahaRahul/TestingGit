@@ -98,6 +98,8 @@ sum(dupCarat)
 uniqCarat = diamondData.carat.drop_duplicates()
 uniqCarat
 
+uniqCarat.shape
+
 # dropping passed columns
 diamondData.drop(["carat"], axis = 1, inplace = True) 
 diamondData.drop(["Unnamed: 0"], axis = 1, inplace = True) 
