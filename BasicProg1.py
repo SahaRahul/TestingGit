@@ -45,6 +45,13 @@ cldata.temperature.value_counts()
 
 ''' Importing csv file '''
 diamondData = pd.read_csv('/home/rahulsaha/pythonCode/diamond.csv')
+type(diamondData)
+
+type(pd.read_csv('/home/rahulsaha/pythonCode/diamond.csv'))
+
+''' Selection of certain index rowId from the dataframe  '''
+diamondData.iloc[[2,4,6,8]]
+
 
 ''' Checking dimension for the imported csv file '''
 diamondData.shape
@@ -71,6 +78,26 @@ diamondData.color.value_counts()
 diamondData.cut.value_counts() 
 diamondData.clarity.value_counts() 
 
+# create a new column 
+diamondData['xy'] = (diamondData['x']) * (diamondData['y'])
+
+# display the column name along with newly created column name
+diamondData.columns.values
+
+# Sorting dataFrame
+diamondDataSort=diamondData.sort_values(['price', 'carat'], ascending = [0, 1])
+
+
+dups = diamondData.duplicated()
+sum(dups)
+
+dupCarat = diamondData.carat.duplicated()
+sum(dupCarat)
+
+''' Remove duplicate or get the unique values '''
+uniqCarat = diamondData.carat.drop_duplicates()
+uniqCarat
+
 # dropping passed columns
 diamondData.drop(["carat"], axis = 1, inplace = True) 
 diamondData.drop(["Unnamed: 0"], axis = 1, inplace = True) 
@@ -78,5 +105,7 @@ diamondData.drop(["Unnamed: 0"], axis = 1, inplace = True)
 ''' deletion of dataframe '''
 del diamondData
 
-# display 
-diamondData 
+
+
+
+
