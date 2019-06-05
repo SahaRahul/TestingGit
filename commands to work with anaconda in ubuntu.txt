@@ -1,0 +1,32 @@
+**************** Unix - ubuntu ***************
+# Switch to the super user to change the timezone
+rahulsaha@ubuntu:~$ sudo su
+[sudo] password for rahulsaha:
+
+# Lets reconfigure timezone data
+root@ubuntu:/home/rahulsaha# dpkg-reconfigure tzdata
+
+Current default time zone: 'Asia/Kolkata'
+Local time is now:      Wed Jun  5 15:36:06 IST 2019.
+Universal Time is now:  Wed Jun  5 10:06:06 UTC 2019.
+
+# exit from the superuser mode
+exit
+
+**************** Anaconda - command ***************
+conda install ipykernel cloudpickle
+
+conda activate my_env
+
+conda info -e
+# conda environments:
+#
+base                     /home/rahulsaha/anaconda3
+my_env                *  /home/rahulsaha/anaconda3/envs/my_env
+
+sypder3
+
+pip install scikit-learn
+
+# Below is the recommended installation
+conda install scikit-learn
