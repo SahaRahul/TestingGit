@@ -7,7 +7,6 @@ Created on Wed Jun  5 21:38:08 2019
 """
 
 import sklearn.datasets
-import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
 from sklearn.model_selection import train_test_split
